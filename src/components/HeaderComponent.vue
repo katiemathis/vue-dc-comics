@@ -28,43 +28,35 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
+
+@import '../assets/style/variables.scss';
 
 .header-container {
-    display: flex;
-    justify-content: space-around;
+    @include flex-row-around;
+      .logo {
+      width: 40%;
+        img {
+        max-height: 60px;
+        }
+      }
+      .menu {
+      width: 60%;
+      padding-right: 10%;
+        ul {
+        list-style-type: none;
+        padding: 0;
+          li {
+            @include li-menu-horizontal;
+            a {
+              color: #000;
+              text-decoration: none;
+            }
+          }
+        }
+      }
 }
 
-.logo {
-    width: 40%;
-    
-}
 
-img {
-    max-height: 60px;
-}
 
-.menu {
-    width: 60%;
-    padding-right: 10%;
-}
-
-h3 {
-  margin: 40px 0 0;
-}
-ul {
-  list-style-type: none;
-  padding: 0;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 11px;
-  font-weight: 600;
-  vertical-align: center;
-}
-a {
-  color: #000;
-  text-decoration: none;
-}
 </style>

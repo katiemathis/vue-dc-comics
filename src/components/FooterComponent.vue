@@ -122,6 +122,8 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
+
+
 * {
     padding: 0;
     margin: 0;
@@ -252,8 +254,8 @@ button {
 }
 
 .img-card {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
 }
 
 .img-card img {
