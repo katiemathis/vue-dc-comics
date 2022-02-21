@@ -5,7 +5,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-comics-digital-comics.png">
+                        <img src="../assets/img/buy-comics-digital-comics.png">
                     </div>
                     <h6>DIGITAL COMICS</h6>
                 </a>
@@ -14,7 +14,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-comics-merchandise.png">
+                        <img src="../assets/img/buy-comics-merchandise.png">
                     </div>
                     <h6>DC MERCHANDISE</h6>
                 </a>
@@ -22,7 +22,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-comics-subscriptions.png">
+                        <img src="../assets/img/buy-comics-subscriptions.png">
                     </div>
                     <h6>SUBSCRIPTIONS</h6>
                 </a>
@@ -30,7 +30,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-comics-shop-locator.png">
+                        <img src="../assets/img/buy-comics-shop-locator.png">
                     </div>
                     <h6>COMIC SHOP LOCATOR</h6>
                 </a>
@@ -38,7 +38,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-dc-power-visa.svg">
+                        <img src="../assets/img/buy-dc-power-visa.svg">
                     </div>
                     <h6>DC POWER VISA</h6>
                 </a>
@@ -92,7 +92,7 @@
         </div>
     </div>
     <div class="footer-right">
-        <img src="../assets/dc-logo-bg.png" alt="Big Logo">
+        <img src="../assets/img/dc-logo-bg.png" alt="Big Logo">
     </div>
 
     <div class="footer-bottom-banner">
@@ -101,11 +101,11 @@
         </div>
         <ul class="menu-row footer-right">
             <li><a href="#" target="_blank" rel="noopener" id="follow">FOLLOW US</a></li>
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/footer-facebook.png" alt=""></a></li>
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/footer-twitter.png" alt=""></a></li>            
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/footer-youtube.png" alt=""></a></li>
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/footer-pinterest.png" alt=""></a></li>
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/footer-periscope.png" alt=""></a></li>
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-facebook.png" alt=""></a></li>
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-twitter.png" alt=""></a></li>            
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-youtube.png" alt=""></a></li>
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-pinterest.png" alt=""></a></li>
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-periscope.png" alt=""></a></li>
         </ul>
     </div>
   </div>
@@ -190,7 +190,7 @@ export default {
 
 .footer-container {
     @include flex-row-around;
-    background-image: url("../assets/footer-bg.jpg");
+    background-image: url("../assets/img/footer-bg.jpg");
     height: 400px;
 
 
@@ -223,6 +223,9 @@ export default {
                         a {
                         text-decoration: none;
                         color: $colorGrey;
+                        &:hover {
+                            color: $colorWhite;
+                        }
                         }
                     }
                 }
@@ -239,6 +242,9 @@ export default {
         img {
         max-height: 400px;
         padding-left: 5%;
+        }
+        a {
+            text-decoration: none;
         }
 }        
 
@@ -278,6 +284,10 @@ button {
     position: absolute;
     top: 15px;
     left: 15%;
+
+    a {
+        text-decoration: none;
+    }
 }
 
 #button {

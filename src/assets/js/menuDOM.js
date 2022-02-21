@@ -14,7 +14,7 @@ const app = new Vue (
                 'FANS',
                 'NEWS',
                 'SHOP',
-            ]
+            ],
         },
     }
 )

@@ -10,7 +10,7 @@
 import HeaderComponent from './components/HeaderComponent.vue'
 import BodyComponent from './components/BodyComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
-import * as menuDOM from '../assets/js/menuDOM.js'
+/*import './assets/js/menuDOM.js'*/
 
 
 export default {
@@ -19,9 +19,6 @@ export default {
     HeaderComponent,
     BodyComponent,
     FooterComponent,
-  },
-  assets: {
-    menuDOM,
   },
 
 
@@ -34,7 +31,6 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
   margin: 0;
   padding: 0;
   box-sizing: border-box;

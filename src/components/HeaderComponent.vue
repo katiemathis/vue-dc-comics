@@ -1,11 +1,12 @@
 <template>
   <div class="header-container">
     <div class="logo">
-        <img alt="Vue logo" src="../assets/dc-logo.png">
+        <img alt="Vue logo" src="../assets/img/dc-logo.png">
     </div>
     <div class="menu">
+        <!-- <ul v-for="(navMenuItem, index) in navMenuItems" :key="index">-->
         <ul>
-            <!--<li><a href="#" target="_blank" rel="noopener">{{navMenuItem}}</a></li>-->
+            <!-- <li><a href="#" target="_blank" rel="noopener">{{navMenuItem}}</a></li>-->
             <li><a href="#" target="_blank" rel="noopener">CHARACTERS</a></li>
             <li><a href="#" target="_blank" rel="noopener">COMICS</a></li>
             <li><a href="#" target="_blank" rel="noopener">MOVIES</a></li>
@@ -24,6 +25,7 @@
 <script>
 export default {
   name: 'HeaderComponent',
+  
 }
 </script>
 

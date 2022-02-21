@@ -19,9 +19,7 @@ export default {
 @import '../assets/style/variables.scss';
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  @include body-rules;
 }
 
 .body-container {
@@ -30,8 +28,7 @@ export default {
     font-size: 16px;
     font-weight: 600;
     min-height: 100px;
-
-
+    
     p {
         line-height: 100px;
     }
