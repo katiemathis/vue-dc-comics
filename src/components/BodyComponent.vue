@@ -14,7 +14,9 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
+
+@import '../assets/style/variables.scss';
 
 * {
   margin: 0;
@@ -24,13 +26,15 @@ export default {
 
 .body-container {
     background-color: #000;
-    color: #fff;
+    color: $colorWhite;
     font-size: 16px;
     font-weight: 600;
     min-height: 100px;
+
+
+    p {
+        line-height: 100px;
+    }
 }
 
-p {
-    line-height: 100px;
-}
 </style>

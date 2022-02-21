@@ -5,6 +5,7 @@
     </div>
     <div class="menu">
         <ul>
+            <!--<li><a href="#" target="_blank" rel="noopener">{{navMenuItem}}</a></li>-->
             <li><a href="#" target="_blank" rel="noopener">CHARACTERS</a></li>
             <li><a href="#" target="_blank" rel="noopener">COMICS</a></li>
             <li><a href="#" target="_blank" rel="noopener">MOVIES</a></li>
@@ -23,7 +24,6 @@
 <script>
 export default {
   name: 'HeaderComponent',
-
 }
 </script>
 
@@ -46,11 +46,20 @@ export default {
         ul {
         list-style-type: none;
         padding: 0;
+        margin: 1em 0 0 0;
           li {
             @include li-menu-horizontal;
+            margin: 0 10px;
+            height: 50px;
+            &:hover {
+              border-bottom: $colorBlue solid 2px;
+            }
             a {
               color: #000;
               text-decoration: none;
+              &:hover {
+              color: $colorBlue;
+              }
             }
           }
         }

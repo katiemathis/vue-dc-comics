@@ -10,6 +10,7 @@
 import HeaderComponent from './components/HeaderComponent.vue'
 import BodyComponent from './components/BodyComponent.vue'
 import FooterComponent from './components/FooterComponent.vue'
+import * as menuDOM from '../assets/js/menuDOM.js'
 
 
 export default {
@@ -17,8 +18,13 @@ export default {
   components: {
     HeaderComponent,
     BodyComponent,
-    FooterComponent
-  }
+    FooterComponent,
+  },
+  assets: {
+    menuDOM,
+  },
+
+
 }
 </script>
 

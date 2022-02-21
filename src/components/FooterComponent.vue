@@ -120,77 +120,130 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
 
-
+@import '../assets/style/variables.scss';
 
 * {
-    padding: 0;
-    margin: 0;
+    @include body-rules;
     text-align: left;
     color: #fff;
-
 }
 
 .full-footer-container {
     position: relative;
 }
 
-.footer-container {
+/* shop container */
+
+.shop-container {
+    @include flex-row-around;
+    background-color: $colorBlue;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+
+    #shop-list {
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+    margin: auto;
+    line-height: 70px;
     display: flex;
-    justify-content: space-around;
+    align-self: center;
+
+        li {
+        @include li-menu-horizontal;
+        margin: 0 10px;
+
+            .shop-row {
+            @include flex-row-center;
+            color: #fff;
+            text-decoration: none;
+            
+
+                .img-card {
+                width: 40px;
+                height: 40px;
+
+                    img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding-right: 10px;
+                    }
+
+                    h6 {
+                    padding-left: 10px;
+                    }
+
+
+                }
+            }
+        }
+    }
+}
+
+
+/*main footer contents */
+
+.footer-container {
+    @include flex-row-around;
     background-image: url("../assets/footer-bg.jpg");
     height: 400px;
+
+
+    .footer-left {
+        display: flex;
+        width: 40%;
+        padding: 5% 0 5% 15%;
+
+
+        .menu-col {
+            @include flex-column;
+
+                h6 {
+                padding: 10px;
+                margin-top: 10px;
+                }
+                ul {
+                list-style-type: none;
+                padding: 0;
+                margin-top: 10px;
+                    
+
+                    li {
+                    display: inline-block;
+                    margin: 0 10px;
+                    font-size: 11px;
+                    vertical-align: center;
+                    padding: 1% 0;
+
+                        a {
+                        text-decoration: none;
+                        color: $colorGrey;
+                        }
+                    }
+                }
+                
+        }
+    }
 }
 
-.footer-left {
-    display: flex;
-    width: 40%;
-    padding: 5% 0 5% 15%;
-}
-
-.menu-col {
-    display: flex;
-    flex-direction: column;
-}
 
 .footer-right {
     width: 60%;
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    align-items:center;
-}
+    @include flex-row-center;
 
-.footer-right img {
-    max-height: 400px;
-    padding-left: 5%;
-}
+        img {
+        max-height: 400px;
+        padding-left: 5%;
+        }
+}        
 
-.footer-left h6 {
-    padding: 10px;
-    margin-top: 10px;
-}
 
-.footer-left ul {
-  list-style-type: none;
-  padding: 0;
-  margin-top: 10px;
-}
-
-.footer-left li {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 11px;
-  vertical-align: center;
-  padding: 1% 0;
-
-}
-
-a {
-    text-decoration: none;
-    color: #605f60
-}
+/*footer bottom banner */
 
 .footer-bottom-banner {
     position: absolute;
@@ -207,15 +260,12 @@ a {
 }
 
 #follow {
-    color: #0c69f7;
+    color: $colorBlue;
 }
 
 .footer-right li {
-  display: inline-block;
-  margin: 0 5px;
-  font-size: 11px;
-  vertical-align: center;
-  padding: 0;
+    @include li-menu-horizontal;
+    margin: 0 5px;
 
 }
 
@@ -231,67 +281,12 @@ button {
 }
 
 #button {
-    color: white;
-}
-
-/* shop container */
-
-.shop-container {
-    display: flex;
-    justify-content: space-around;
-    background-color: #0c69f7;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-
-}
-
-.shop-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-card {
-    width: 40px;
-    height: 40px;
-}
-
-.img-card img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding-right: 10px;
-}
-
-h6 {
-    padding-left: 10px;
+    color: $colorWhite;
 }
 
 
+    
 
-
-#shop-list {
-    list-style-type: none;
-    padding: 0;
-    height: 100%;
-    margin: auto;
-    line-height: 70px;
-    display: flex;
-    align-self: center;
-}
-#shop-list li {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 11px;
-  font-weight: 600;
-  vertical-align: center;
-}
-#shop-list a {
-  color: #fff;
-  text-decoration: none;
-}
 
 
 
