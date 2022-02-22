@@ -1,24 +1,39 @@
 <template>
-  <div class="shop-container">
-        <ul id="shop-list">
-            <li v-for="(product,y) in products" :key="y">
-                <a href="#" target="_blank" rel="noopener" class="shop-row">
-                    <div class="img-card">
-                        <img :src="product.src"> 
+        <div class="product-cards-container" >
+            <div class="product-cards" v-for="(product, y) in products" :key="y">
+                <div class="product-card">
+                    <div class="product-image">
+                        <img :src="product.thumb">
                     </div>
-                    <h6>{{product.text}}</h6>
-                </a>
+                    <div class="product-series">
+                        <h6>{{product.series}}</h6>
+                    </div>
 
-            </li>
-        </ul>
-  </div>
+                
+                </div>
+            
+            </div>
+            </div>
+            <!--<div class="shop-container">
+                    <ul id="shop-list">
+                        <li v-for="(product, y) in products" :key="y">
+                            <a href="#" target="_blank" rel="noopener" class="shop-row">
+                                <div class="img-card">
+                                    <img :src="product.src"> 
+                                </div>
+                                <h6>{{product.text}}</h6>
+                            </a>
+
+                        </li>
+                    </ul>
+            </div>-->
 </template>
 
 <script>
 
 
 export default {
-  name: 'Products',
+  name: 'ProductsSection',
   props: ["products"],
 
 }
@@ -35,55 +50,43 @@ export default {
     color: #fff;
 }
 
-.shop-container {
-    @include flex-row-around;
-    background-color: $colorBlue;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
+.product-cards-container {
+      @include flex-row-around;
+      flex-wrap: wrap;
+      width: 60%;
+      margin: auto;
 
+    
+      .product-cards {
+        @include flex-row-around;
+        height: 150px;
+        margin: auto;
 
-    #shop-list {
-    list-style-type: none;
-    padding: 0;
-    height: 100%;
-    margin: auto;
-    line-height: 70px;
-    display: flex;
-    align-self: center;
+          .product-card {
+            @include flex-column;
+            height: 100px;
+            width: 100px;
+            margin: 10px;
 
-        li {
-        @include li-menu-horizontal;
-        margin: 0 10px;
+              .product-image {
+                height: 100px;
+                width: 100px;
             
-            .shop-row {
-            @include flex-row-center;
-            color: #fff;
-            text-decoration: none;
-
-                .img-card {
-                width: 40px;
-                height: 40px;
-
                     img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: contain;
-                    padding-right: 10px;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
                     }
-                       h6 {
-                    padding-left: 10px;
-                    }
+              }
 
+              .product-series {
+                width: 100%;
+                line-height: 50px;
+              }
 
+          }
 
-                }
-            
-                
-            }
-        }
+      }
     }
-}
 
 </style>
