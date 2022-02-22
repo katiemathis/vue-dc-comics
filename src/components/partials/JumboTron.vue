@@ -1,6 +1,5 @@
 <template>
     <div class="container">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem non esse iste voluptates error aliquid quaerat officia a omnis deleniti sapiente natus molestiae id repellendus minima cum nisi, neque architecto.
     </div>
 </template>
 

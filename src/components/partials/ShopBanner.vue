@@ -1,16 +1,16 @@
 <template>
   <div class="shop-container">
         <ul id="shop-list">
-            <li>
+            <li v-for="(item, index) in items" :key="index">
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../../assets/img/buy-comics-digital-comics.png">
+                        <img :src="item.src">
                     </div>
-                    <h6>DIGITAL COMICS</h6>
+                    <h6>{{item.text}}</h6>
                 </a>
 
             </li>
-            <li>
+            <!--<li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
                         <img src="../../assets/img/buy-comics-merchandise.png">
@@ -41,7 +41,7 @@
                     </div>
                     <h6>DC POWER VISA</h6>
                 </a>
-            </li>
+            </li>-->
         </ul>
   </div>
 </template>
@@ -49,6 +49,7 @@
 <script>
 export default {
   name: 'ShopBanner',
+  props: ["text","items"],
 
 }
 </script>

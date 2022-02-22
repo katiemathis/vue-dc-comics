@@ -1,6 +1,10 @@
 <template>
 <div class="full-footer-container">
-    <ShopBanner />
+    <ShopBanner
+        v-for="(shopBannerItem,index) in shopBannerItems" 
+        :key="index"
+        :items="shopBannerItems"
+     />
     <!--<div class="shop-container">
         <ul id="shop-list">
             <li>
@@ -127,6 +131,29 @@ export default {
 
   data () {
       return {
+          shopBannerItems: [
+              {
+                  text: 'DIGITAL COMICS',
+                  src: '../assets/img/buy-comics-digital-comics.png'
+              },
+              {
+                  text: 'DC MERCHANDISE',
+                  src: '../assets/img/buy-comics-merchandise.png'
+              },
+              {
+                  text: 'SUBSCRIPTION',
+                  src: '../assets/img/buy-comics-subscriptions.png'
+              },
+              {
+                  text: 'COMIC SHOP LOCATOR',
+                  src: '../assets/img/buy-comics-shop-locator.png'
+              },
+              {
+                  text: 'DC POWER AREA',
+                  src: '../assets/img/buy-dc-power-visa.svg'
+              },
+
+          ],
           dcComicsItems: [
                 'Characters',
                 'Comics',
@@ -210,7 +237,7 @@ export default {
     position: relative;
 }
 
-/* shop container */
+/* shop container 
 
 .shop-container {
     @include flex-row-around;
@@ -260,7 +287,7 @@ export default {
         }
     }
 }
-
+*/
 
 /*main footer contents */
 
