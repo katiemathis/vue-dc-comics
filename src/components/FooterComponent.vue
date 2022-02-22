@@ -3,8 +3,7 @@
     <ShopBanner
         v-for="(shopBannerItem,x) in shopBannerItems" 
         :key="x"
-        :text="shopBannerItem.text"
-        :src="shopBannerItem.src"
+        :items="shopBannerItems"
      />
     <!--<div class="shop-container">
         <ul id="shop-list">

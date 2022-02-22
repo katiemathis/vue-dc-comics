@@ -17,10 +17,7 @@
 <script>
 export default {
   name: 'ShopBanner',
-  props: {
-      "text": String,
-      "src": String
-  },
+  props: ["items"],
 
 }
 </script>
