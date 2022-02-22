@@ -49,25 +49,28 @@
     <div class="footer-left">
         <div class="menu-col">
             <h6>DC COMICS</h6>
-            <ul class="menu-col">
-                <li><a href="#" target="_blank" rel="noopener">Characters</a></li>
+            <ul class="menu-col" v-for="(dcComicsItem, index) in dcComicsItems" :key="index">
+                <li><a href="#" target="_blank" rel="noopener">{{dcComicsItem}}</a></li>
+                <!--<li><a href="#" target="_blank" rel="noopener">Characters</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Comics</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Movies</a></li>
                 <li><a href="#" target="_blank" rel="noopener">TV</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Games</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Videos</a></li>
-                <li><a href="#" target="_blank" rel="noopener">News</a></li>
+                <li><a href="#" target="_blank" rel="noopener">News</a></li>-->
             </ul>
             <h6>SHOP</h6>
-            <ul class="menu-col">
-                <li><a href="#" target="_blank" rel="noopener">Shop DC</a></li>
-                <li><a href="#" target="_blank" rel="noopener">Shop DC Collectibles</a></li>
+            <ul class="menu-col" v-for="(shopItem, index) in shopItems" :key="index">
+                <li><a href="#" target="_blank" rel="noopener">{{shopItem}}</a></li>
+                <!--<li><a href="#" target="_blank" rel="noopener">Shop DC</a></li>
+                <li><a href="#" target="_blank" rel="noopener">Shop DC Collectibles</a></li>-->
             </ul>
         </div>
         <div class="menu-col">
             <h6>DC</h6>
-            <ul class="menu-col">
-                <li><a href="#" target="_blank" rel="noopener">Terms of Use</a></li>
+            <ul class="menu-col" v-for="(dcItem, index) in dcItems" :key="index">
+                <li><a href="#" target="_blank" rel="noopener">{{dcItem}}</a></li>
+                <!--<li><a href="#" target="_blank" rel="noopener">Terms of Use</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Privacy Policy (new)</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Ad Choices</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Advertising</a></li>
@@ -77,17 +80,18 @@
                 <li><a href="#" target="_blank" rel="noopener">CPSC Certifications</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Ratings</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Shop Help</a></li>
-                <li><a href="#" target="_blank" rel="noopener">Contact Us</a></li>
+                <li><a href="#" target="_blank" rel="noopener">Contact Us</a></li>-->
             </ul>
         </div>
         <div class="menu-col">
             <h6>SITES</h6>
-            <ul class="menu-col">
-                <li><a href="#" target="_blank" rel="noopener">DC</a></li>
+            <ul class="menu-col" v-for="(sitesItem, index) in sitesItems" :key="index">
+                <li><a href="#" target="_blank" rel="noopener">{{sitesItem}}</a></li>
+                <!--<li><a href="#" target="_blank" rel="noopener">DC</a></li>
                 <li><a href="#" target="_blank" rel="noopener">MAD Magazine</a></li>
                 <li><a href="#" target="_blank" rel="noopener">DC Kids</a></li>
                 <li><a href="#" target="_blank" rel="noopener">DC Universe</a></li>
-                <li><a href="#" target="_blank" rel="noopener">DC Power Visa</a></li>
+                <li><a href="#" target="_blank" rel="noopener">DC Power Visa</a></li>-->
             </ul>
         </div>
     </div>
@@ -101,11 +105,11 @@
         </div>
         <ul class="menu-row footer-right">
             <li><a href="#" target="_blank" rel="noopener" id="follow">FOLLOW US</a></li>
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-facebook.png" alt=""></a></li>
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-twitter.png" alt=""></a></li>            
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-youtube.png" alt=""></a></li>
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-pinterest.png" alt=""></a></li>
-            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-periscope.png" alt=""></a></li>
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-facebook.png" alt="facebook"></a></li>
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-twitter.png" alt="twitter"></a></li>            
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-youtube.png" alt="youtube"></a></li>
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-pinterest.png" alt="pinterest"></a></li>
+            <li><a href="#" target="_blank" rel="noopener"><img src="../assets/img/footer-periscope.png" alt="periscope"></a></li>
         </ul>
     </div>
   </div>
@@ -116,7 +120,74 @@
 export default {
   name: 'FooterComponent',
 
+  data () {
+      return {
+          dcComicsItems: [
+                'Characters',
+                'Comics',
+                'Movies',
+                'TV',
+                'Games',
+                'Videos',
+                'News',
+          ],
+          shopItems: [
+              'Shop DC',
+              'Shop DC Collectibles',
+          ],
+          dcItems: [
+              'Terms of Use',
+              'Privacy Policy (new)',
+              'Ad Choices',
+              'Advertising',
+              'Jobs',
+              'Subscriptions',
+              'Talent Workshops',
+              'CPSC Certifications',
+              'Ratings',
+              'Shop Help',
+              'Contact Us',
+          ],
+          sitesItems: [
+              'DC',
+              'MAD Magazine',
+              'DC Kids',
+              'DC Universe',
+              'DC Power Visa',
+
+          ],
+          /*footerRightItems: [
+              {
+                  text: 'FOLLOW US',
+                  img: '',
+              },
+              {
+                  text: 'facebook',
+                  img: 'footer-facebook.png',
+              },
+                            {
+                  text: 'twitter',
+                  img: 'footer-twitter.png',
+              },
+                            {
+                  text: 'youtube',
+                  img: 'footer-youtube.png',
+              },
+                            {
+                  text: 'pinterest',
+                  img: 'footer-pinterest.png',
+              },
+                            {
+                  text: 'periscope',
+                  img: 'footer-periscope.png',
+              },
+          ],*/
+      }
+  }
+
 }
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -210,15 +281,13 @@ export default {
                 ul {
                 list-style-type: none;
                 padding: 0;
-                margin-top: 10px;
-                    
 
                     li {
                     display: inline-block;
                     margin: 0 10px;
                     font-size: 11px;
                     vertical-align: center;
-                    padding: 1% 0;
+                    padding: 0;
 
                         a {
                         text-decoration: none;

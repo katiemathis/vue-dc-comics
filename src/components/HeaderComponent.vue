@@ -28,7 +28,8 @@ export default {
   data () {
     return {
     navMenuItems: ['CHARACTERS', 'COMICS', 
-    'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP',]
+    'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 
+    'VIDEOS', 'FANS', 'NEWS', 'SHOP',]
     }
         
 
