@@ -1,12 +1,12 @@
 <template>
   <div class="shop-container">
         <ul id="shop-list">
-            <li v-for="(item,index) in items" :key="index">
+            <li v-for="(product,y) in products" :key="y">
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img :src="item.src"> 
+                        <img :src="product.src"> 
                     </div>
-                    <h6>{{item.text}}</h6>
+                    <h6>{{product.text}}</h6>
                 </a>
 
             </li>
@@ -18,8 +18,8 @@
 
 
 export default {
-  name: 'ShopBanner',
-  props: ["items"],
+  name: 'Products',
+  props: ["products"],
 
 }
 </script>

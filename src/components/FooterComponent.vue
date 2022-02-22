@@ -5,51 +5,7 @@
         :key="x"
         :items="shopBannerItems"
      />
-    <!--<div class="shop-container">
-        <ul id="shop-list">
-            <li>
-                <a href="#" target="_blank" rel="noopener" class="shop-row">
-                    <div class="img-card">
-                        <img src="../assets/img/buy-comics-digital-comics.png">
-                    </div>
-                    <h6>DIGITAL COMICS</h6>
-                </a>
-
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener" class="shop-row">
-                    <div class="img-card">
-                        <img src="../assets/img/buy-comics-merchandise.png">
-                    </div>
-                    <h6>DC MERCHANDISE</h6>
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener" class="shop-row">
-                    <div class="img-card">
-                        <img src="../assets/img/buy-comics-subscriptions.png">
-                    </div>
-                    <h6>SUBSCRIPTIONS</h6>
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener" class="shop-row">
-                    <div class="img-card">
-                        <img src="../assets/img/buy-comics-shop-locator.png">
-                    </div>
-                    <h6>COMIC SHOP LOCATOR</h6>
-                </a>
-            </li>
-            <li>
-                <a href="#" target="_blank" rel="noopener" class="shop-row">
-                    <div class="img-card">
-                        <img src="../assets/img/buy-dc-power-visa.svg">
-                    </div>
-                    <h6>DC POWER VISA</h6>
-                </a>
-            </li>
-        </ul>
-  </div> -->
+    
   <div class="footer-container">    
     <div class="footer-left">
         <div class="menu-col">
