@@ -4,10 +4,9 @@
         <img alt="Vue logo" src="../assets/img/dc-logo.png">
     </div>
     <div class="menu">
-        <!-- <ul v-for="(navMenuItem, index) in navMenuItems" :key="index">-->
-        <ul>
-            <!-- <li><a href="#" target="_blank" rel="noopener">{{navMenuItem}}</a></li>-->
-            <li><a href="#" target="_blank" rel="noopener">CHARACTERS</a></li>
+        <ul v-for="(navMenuItem, index) in navMenuItems" :key="index">
+            <li><a href="#" target="_blank" rel="noopener">{{navMenuItem}}</a></li>
+            <!-- <li><a href="#" target="_blank" rel="noopener">CHARACTERS</a></li>
             <li><a href="#" target="_blank" rel="noopener">COMICS</a></li>
             <li><a href="#" target="_blank" rel="noopener">MOVIES</a></li>
             <li><a href="#" target="_blank" rel="noopener">TV</a></li>
@@ -16,7 +15,7 @@
             <li><a href="#" target="_blank" rel="noopener">VIDEOS</a></li>
             <li><a href="#" target="_blank" rel="noopener">FANS</a></li>
             <li><a href="#" target="_blank" rel="noopener">NEWS</a></li>
-            <li><a href="#" target="_blank" rel="noopener">SHOP</a></li>
+            <li><a href="#" target="_blank" rel="noopener">SHOP</a></li> -->
         </ul>
     </div>
   </div>
@@ -25,6 +24,15 @@
 <script>
 export default {
   name: 'HeaderComponent',
+
+  data () {
+    return {
+    navMenuItems: ['CHARACTERS', 'COMICS', 
+    'MOVIES', 'TV', 'GAMES', 'COLLECTIBLES', 'VIDEOS', 'FANS', 'NEWS', 'SHOP',]
+    }
+        
+
+  }
   
 }
 </script>
@@ -43,6 +51,7 @@ export default {
         }
       }
       .menu {
+      @include flex-row-around;
       width: 60%;
       padding-right: 10%;
         ul {
