@@ -4,7 +4,7 @@
             <li v-for="(item,index) in items" :key="index">
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img :src="item.src">
+                        <img :src="item.src"> 
                     </div>
                     <h6>{{item.text}}</h6>
                 </a>
@@ -15,6 +15,8 @@
 </template>
 
 <script>
+
+
 export default {
   name: 'ShopBanner',
   props: ["items"],

@@ -1,5 +1,6 @@
 <template>
   <div class="body-container">
+    <img src="../assets/img/jumbotron.jpg" alt="">
     <JumboTron />
   </div>
 </template>
@@ -28,7 +29,16 @@ export default {
     font-size: 16px;
     font-weight: 600;
     min-height: 100px;
-    background-image: url("../assets/img/jumbotron.jpg");
+    position: relative;
+    display: block;
+    /*background-image: url("../assets/img/jumbotron.jpg");*/
+    img {
+      width: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
     
 }
 

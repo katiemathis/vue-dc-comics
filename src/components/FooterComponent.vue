@@ -134,23 +134,23 @@ export default {
           shopBannerItems: [
               {
                   text: 'DIGITAL COMICS',
-                  src: '../assets/img/buy-comics-digital-comics.png',
+                  src: '../../img/buy-comics-digital-comics.png',
               },
               {
                   text: 'DC MERCHANDISE',
-                  src: '../assets/img/buy-comics-merchandise.png',
+                  src: '../../img/buy-comics-merchandise.png',
               },
               {
                   text: 'SUBSCRIPTION',
-                  src: '../assets/img/buy-comics-subscriptions.png',
+                  src: '../../img/buy-comics-subscriptions.png',
               },
               {
                   text: 'COMIC SHOP LOCATOR',
-                  src: '../assets/img/buy-comics-shop-locator.png',
+                  src: '../../img/buy-comics-shop-locator.png',
               },
               {
                   text: 'DC POWER AREA',
-                  src: '../assets/img/buy-dc-power-visa.svg',
+                  src: '../../img/buy-dc-power-visa.svg',
               },
 
           ],
