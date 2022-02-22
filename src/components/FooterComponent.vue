@@ -1,8 +1,9 @@
 <template>
 <div class="full-footer-container">
+        <!--v-for="(shopBannerItem,x) in shopBannerItems" 
+        :key="x"-->
     <ShopBanner
-        v-for="(shopBannerItem,x) in shopBannerItems" 
-        :key="x"
+
         :items="shopBannerItems"
      />
     
@@ -251,6 +252,7 @@ export default {
     @include flex-row-around;
     background-image: url("../assets/img/footer-bg.jpg");
     height: 400px;
+    margin-top: 50px;
 
 
     .footer-left {
@@ -320,10 +322,17 @@ export default {
 
 .footer-bottom-banner img {
     max-height: 20px;
+    &:hover {
+        border: solid 1px $colorWhite;
+        border-radius: 50%;
+    }
 }
 
 #follow {
     color: $colorBlue;
+    &:hover {
+        color: $colorWhite;
+    }
 }
 
 .footer-right li {
@@ -337,10 +346,13 @@ button {
     padding: 10px;
     background-color: transparent;
     border: solid;
-    border-color: #0c69f7;
+    border-color: $colorBlue;
     position: absolute;
     top: 15px;
     left: 15%;
+    &:hover {
+        border-color: $colorWhite;
+    }
 
     #button {
         text-decoration: none;

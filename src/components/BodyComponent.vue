@@ -1,27 +1,14 @@
 <template>
   <div class="body-container" >
-    <!--<img src="../assets/img/jumbotron.jpg" alt="">-->
-    <!--<JumboTron />-->
+    <div class="jumbotron-img">
+      <img src="../assets/img/jumbotron.jpg" alt="">
+    </div>
+    <!--v-for="(productItem, index) in productItems" :key="index"-->
     <ProductsSection
-        v-for="(productItem,v) in productItems" 
-        :key="v"
         :products="productItems"
     />
-    <!--<div class="product-cards-container">
-      <div class="product-cards" v-for="n in 12" :key="n">
-        <div class="product-card">
-          <div class="product-image">
+  
 
-          </div>
-          <div class="product-series">
-            <h6> PRODUCT n. {{n}}</h6>
-          </div>
-
-          
-        </div>
-      
-      </div>
-    </div>-->
   </div>
 
 </template>
@@ -112,10 +99,12 @@ export default {
         }
       ]
     }
-    
-  }
 
+  }
 }
+    
+
+
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
@@ -128,22 +117,26 @@ export default {
 }
 
 .body-container {
-    background-color: #000;
     color: $colorWhite;
     font-size: 16px;
     font-weight: 600;
-    min-height: 100px;
     position: relative;
+    min-height: 80vh;
     padding: 15px 0;
     
-    /*background-image: url("../assets/img/jumbotron.jpg");*/
-    /*img {
+    .jumbotron-img {
+      height: 200px;
+
+      img{
       width: 100%;
       object-fit: cover;
-      position: absolute;
-      top: 0;
-      left: 0;
-    }*/
+      object-position: top;
+      }
+
+    }
+
+
+
     
     
 }

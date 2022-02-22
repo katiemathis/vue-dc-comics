@@ -61,10 +61,16 @@ export default {
             @include flex-row-center;
             color: #fff;
             text-decoration: none;
+            padding: 0 5px;
+            &:hover {
+                background-color: rgba(0,0,0,0.5);
+                cursor: pointer;
+            }
 
                 .img-card {
                 width: 40px;
                 height: 40px;
+
 
                     img {
                     width: 100%;
@@ -72,8 +78,9 @@ export default {
                     object-fit: contain;
                     padding-right: 10px;
                     }
-                       h6 {
+                    h6 {
                     padding-left: 10px;
+                            
                     }
 
 

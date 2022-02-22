@@ -45,11 +45,17 @@ export default {
 
 .header-container {
     @include flex-row-around;
+    max-height: 70px;
       .logo {
       width: 40%;
         img {
-        max-height: 60px;
+          height: 50px;
+          &:hover {
+            height: 55px;
+            cursor: pointer;
+          }
         }
+
       }
       .menu {
       @include flex-row-around;
