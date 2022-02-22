@@ -18,7 +18,6 @@
 import ProductsSection from './partials/ProductsSection.vue'
 
 export default {
-  /*components: { JumboTron },*/
   components: { ProductsSection },
   name: 'BodyComponent',
 

@@ -145,11 +145,7 @@ export default {
               'DC Power Visa',
 
           ],
-          /*footerRightItems: [
-              {
-                  text: 'FOLLOW US',
-                  img: '',
-              },
+          footerRightItems: [
               {
                   text: 'facebook',
                   img: 'footer-facebook.png',
@@ -170,7 +166,7 @@ export default {
                   text: 'periscope',
                   img: 'footer-periscope.png',
               },
-          ],*/
+          ],
       }
   }
 
