@@ -1,9 +1,10 @@
 <template>
 <div class="full-footer-container">
     <ShopBanner
-        v-for="(shopBannerItem,index) in shopBannerItems" 
-        :key="index"
-        :items="shopBannerItems"
+        v-for="(shopBannerItem,x) in shopBannerItems" 
+        :key="x"
+        :text="shopBannerItem.text"
+        :src="shopBannerItem.src"
      />
     <!--<div class="shop-container">
         <ul id="shop-list">
@@ -54,7 +55,7 @@
     <div class="footer-left">
         <div class="menu-col">
             <h6>DC COMICS</h6>
-            <ul class="menu-col" v-for="(dcComicsItem, index) in dcComicsItems" :key="index">
+            <ul class="menu-col" v-for="(dcComicsItem, a) in dcComicsItems" :key="a">
                 <li><a href="#" target="_blank" rel="noopener">{{dcComicsItem}}</a></li>
                 <!--<li><a href="#" target="_blank" rel="noopener">Characters</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Comics</a></li>
@@ -65,7 +66,7 @@
                 <li><a href="#" target="_blank" rel="noopener">News</a></li>-->
             </ul>
             <h6>SHOP</h6>
-            <ul class="menu-col" v-for="(shopItem, index) in shopItems" :key="index">
+            <ul class="menu-col" v-for="(shopItem, b) in shopItems" :key="b">
                 <li><a href="#" target="_blank" rel="noopener">{{shopItem}}</a></li>
                 <!--<li><a href="#" target="_blank" rel="noopener">Shop DC</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Shop DC Collectibles</a></li>-->
@@ -73,7 +74,7 @@
         </div>
         <div class="menu-col">
             <h6>DC</h6>
-            <ul class="menu-col" v-for="(dcItem, index) in dcItems" :key="index">
+            <ul class="menu-col" v-for="(dcItem, c) in dcItems" :key="c">
                 <li><a href="#" target="_blank" rel="noopener">{{dcItem}}</a></li>
                 <!--<li><a href="#" target="_blank" rel="noopener">Terms of Use</a></li>
                 <li><a href="#" target="_blank" rel="noopener">Privacy Policy (new)</a></li>
@@ -90,7 +91,7 @@
         </div>
         <div class="menu-col">
             <h6>SITES</h6>
-            <ul class="menu-col" v-for="(sitesItem, index) in sitesItems" :key="index">
+            <ul class="menu-col" v-for="(sitesItem, d) in sitesItems" :key="d">
                 <li><a href="#" target="_blank" rel="noopener">{{sitesItem}}</a></li>
                 <!--<li><a href="#" target="_blank" rel="noopener">DC</a></li>
                 <li><a href="#" target="_blank" rel="noopener">MAD Magazine</a></li>
@@ -134,23 +135,23 @@ export default {
           shopBannerItems: [
               {
                   text: 'DIGITAL COMICS',
-                  src: '../assets/img/buy-comics-digital-comics.png'
+                  src: '../assets/img/buy-comics-digital-comics.png',
               },
               {
                   text: 'DC MERCHANDISE',
-                  src: '../assets/img/buy-comics-merchandise.png'
+                  src: '../assets/img/buy-comics-merchandise.png',
               },
               {
                   text: 'SUBSCRIPTION',
-                  src: '../assets/img/buy-comics-subscriptions.png'
+                  src: '../assets/img/buy-comics-subscriptions.png',
               },
               {
                   text: 'COMIC SHOP LOCATOR',
-                  src: '../assets/img/buy-comics-shop-locator.png'
+                  src: '../assets/img/buy-comics-shop-locator.png',
               },
               {
                   text: 'DC POWER AREA',
-                  src: '../assets/img/buy-dc-power-visa.svg'
+                  src: '../assets/img/buy-dc-power-visa.svg',
               },
 
           ],
@@ -237,7 +238,7 @@ export default {
     position: relative;
 }
 
-/* shop container 
+/* shop container
 
 .shop-container {
     @include flex-row-around;
