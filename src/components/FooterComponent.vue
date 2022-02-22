@@ -1,6 +1,7 @@
 <template>
 <div class="full-footer-container">
-    <div class="shop-container">
+    <ShopBanner />
+    <!--<div class="shop-container">
         <ul id="shop-list">
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
@@ -44,7 +45,7 @@
                 </a>
             </li>
         </ul>
-  </div>
+  </div> -->
   <div class="footer-container">    
     <div class="footer-left">
         <div class="menu-col">
@@ -117,8 +118,12 @@
 </template>
 
 <script>
+
+import ShopBanner from './partials/ShopBanner.vue'
+
 export default {
-  name: 'FooterComponent',
+    components: {ShopBanner},
+    name: 'FooterComponent',
 
   data () {
       return {

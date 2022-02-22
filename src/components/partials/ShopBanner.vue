@@ -1,10 +1,10 @@
 <template>
   <div class="shop-container">
-        <ul>
+        <ul id="shop-list">
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-comics-digital-comics.png">
+                        <img src="../../assets/img/buy-comics-digital-comics.png">
                     </div>
                     <h6>DIGITAL COMICS</h6>
                 </a>
@@ -13,7 +13,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-comics-merchandise.png">
+                        <img src="../../assets/img/buy-comics-merchandise.png">
                     </div>
                     <h6>DC MERCHANDISE</h6>
                 </a>
@@ -21,7 +21,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-comics-subscriptions.png">
+                        <img src="../../assets/img/buy-comics-subscriptions.png">
                     </div>
                     <h6>SUBSCRIPTIONS</h6>
                 </a>
@@ -29,7 +29,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-comics-shop-locator.png">
+                        <img src="../../assets/img/buy-comics-shop-locator.png">
                     </div>
                     <h6>COMIC SHOP LOCATOR</h6>
                 </a>
@@ -37,7 +37,7 @@
             <li>
                 <a href="#" target="_blank" rel="noopener" class="shop-row">
                     <div class="img-card">
-                        <img src="../assets/buy-dc-power-visa.svg">
+                        <img src="../../assets/img/buy-dc-power-visa.svg">
                     </div>
                     <h6>DC POWER VISA</h6>
                 </a>
@@ -54,41 +54,26 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style scoped lang="scss">
+
+@import '../../assets/style/variables.scss';
+
+* {
+    @include body-rules;
+    text-align: left;
+    color: #fff;
+}
+
 
 .shop-container {
-    display: flex;
-    justify-content: space-around;
-    background-color: #0c69f7;
-
-}
-
-.shop-row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.img-card {
-    width: 50px;
-    height: 50px;
-}
-
-.img-card img {
+    @include flex-row-around;
+    background-color: $colorBlue;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    padding-right: 10px;
-}
 
-h6 {
-    padding-left: 10px;
-}
-
-
-
-
-ul {
+    #shop-list {
     list-style-type: none;
     padding: 0;
     height: 100%;
@@ -96,16 +81,36 @@ ul {
     line-height: 70px;
     display: flex;
     align-self: center;
-}
-li {
-  display: inline-block;
-  margin: 0 10px;
-  font-size: 11px;
-  font-weight: 600;
-  vertical-align: center;
-}
-a {
-  color: #fff;
-  text-decoration: none;
+
+        li {
+        @include li-menu-horizontal;
+        margin: 0 10px;
+
+            .shop-row {
+            @include flex-row-center;
+            color: #fff;
+            text-decoration: none;
+            
+
+                .img-card {
+                width: 40px;
+                height: 40px;
+
+                    img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: contain;
+                    padding-right: 10px;
+                    }
+
+                    h6 {
+                    padding-left: 10px;
+                    }
+
+
+                }
+            }
+        }
+    }
 }
 </style>
