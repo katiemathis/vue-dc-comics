@@ -354,14 +354,12 @@ button {
     top: 15px;
     left: 15%;
 
-    a {
+    #button {
         text-decoration: none;
+        color: $colorWhite;
     }
 }
 
-#button {
-    color: $colorWhite;
-}
 
 
     

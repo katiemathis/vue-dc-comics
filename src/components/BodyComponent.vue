@@ -1,13 +1,13 @@
 <template>
   <div class="body-container">
-    <div>
-        <p>--> CONTENT GOES HERE  </p>
-    </div>
+    <JumboTron />
   </div>
 </template>
 
 <script>
+import JumboTron from './partials/JumboTron.vue'
 export default {
+  components: { JumboTron },
   name: 'BodyComponent',
 
 }
@@ -28,10 +28,8 @@ export default {
     font-size: 16px;
     font-weight: 600;
     min-height: 100px;
+    background-image: url("../assets/img/jumbotron.jpg");
     
-    p {
-        line-height: 100px;
-    }
 }
 
 </style>
